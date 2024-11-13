@@ -25,6 +25,10 @@ p {
     color: #003366;
 }
 
+h3 {
+    color: #003366;
+}
+
 header {
     background-color: #003366;
     padding: 15px;
@@ -48,6 +52,7 @@ nav ul li a {
 }
 
 footer {
+    height: 20px;
     background-color: #003366;
     color: white;
     text-align: center;
@@ -147,4 +152,63 @@ h1 {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+/* Style for the trending players section */
+#trendPlyrs {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f8fa; /* Light background for the whole section */
+}
+
+/* Style for the player cards */
+.player-card {
+    background: linear-gradient(145deg, #e0eafc, #cfdef3); /* Soft blue gradient */
+    border-radius: 12px;
+    border: 1px solid #d0e0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover effect */
+.player-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for player image */
+.player-image {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ffffff; /* White border for image */
+}
+
+/* Style for player info */
+.player-info h3 {
+    font-size: 20px;
+    color: #2b2d42; /* Dark gray-blue color */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.player-info p {
+    font-size: 14px;
+    color: #495057; /* Soft gray color for text */
+    margin: 5px 0;
+}
+
+/* Layout for the trending players container */
+#trending-players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }

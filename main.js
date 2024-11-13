@@ -112,3 +112,35 @@ function renderTeamRecords(teams) {
 
 // Call the function to fetch and display team records
 fetchTeamRecords();
+
+async function fetchTrendingPlayers() {
+    const response = await fetch("https://00ef4e9b-77f0-4770-a05e-852e0c3cce03-00-326iz8r73a3gm.riker.replit.dev/getListOfTrendingPlayers");
+    const data = await response.json();
+    renderTrendingPlayers(data.player);
+}
+
+function renderTrendingPlayers(players) {
+    const trendingPlayersDiv = document.getElementById("trending-players");
+    trendingPlayersDiv.innerHTML = ""; // Clear previous content
+
+    players.forEach(player => {
+        const playerCard = document.createElement("div");
+        playerCard.className = "player-card";
+        playerCard.innerHTML = `
+            <div class="player-info">
+                <h3>${player.name}</h3>
+                <p>${player.teamName}</p>
+            </div>
+        `;
+
+        // Add click event listener
+        playerCard.onclick = () => {
+            // Redirect to playerInfo.html with the playerId as a query parameter
+            window.location.href = `playerInfo/playerInfo.html?playerId=${player.id}`;
+        };
+
+        trendingPlayersDiv.appendChild(playerCard);
+    });
+}
+
+fetchTrendingPlayers();
