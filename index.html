@@ -1,96 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Cricket</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
 </head>
+
 <body>
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Indian Cricket</a></li>
-                <li><a href="#team">Indian Cricket Team</a></li>
-                <li><a href="#gallery">Media Gallery</a></li>
-                <li><a href="#records">Statistics & Records</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Indian Cricket</a></li>
+        <li><a href="#team">Indian Cricket Team</a></li>
+        <li><a href="#gallery">Media Gallery</a></li>
+        <li><a href="#records">Statistics & Records</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Homepage Section -->
-    <section id="home" class="section">
-        <h1>Latest News and Updates</h1>
-        <p>Welcome to the Indian Cricket website! Here you'll find the latest news and updates on the Indian cricket team, milestones, and more!</p>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-item">India wins a historic match against Australia in the Border-Gavaskar Trophy!</div>
-                <div class="carousel-item">Virat Kohli scores a double century in the second Test against Sri Lanka.</div>
-                <div class="carousel-item">BCCI announces the squad for the 2024 World Cup.</div>
-            </div>
-        </div>
-    </section>
+  <!-- Homepage Section -->
+  <section id="home" class="section">
+    <h1>Latest News and Updates</h1>
+    <p>Welcome to the Indian Cricket website! Here you'll find the latest news and updates on the Indian cricket team,
+      milestones, and more!</p>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">India wins a historic match against Australia in the Border-Gavaskar Trophy!</div>
+        <div class="carousel-item">Virat Kohli scores a double century in the second Test against Sri Lanka.</div>
+        <div class="carousel-item">BCCI announces the squad for the 2024 World Cup.</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Indian Cricket Section -->
-    <section id="about" class="section">
-        <h1>About Indian Cricket</h1>
-        <p>Indian cricket has a rich and storied history, with major milestones such as...</p>
-        <ul>
-            <li>Milestone 1: India’s first Test match victory.</li>
-            <li>Milestone 2: Winning the ICC World Cup in 1983.</li>
-            <li>Milestone 3: Historic Test series win in Australia 2020-21.</li>
-        </ul>
-        <h2>Famous Players</h2>
-        <ul>
-            <li>Sachin Tendulkar: "The Little Master" - Icon of Indian cricket.</li>
-            <li>Virat Kohli: Modern-day cricket legend.</li>
-            <li>Kapil Dev: 1983 World Cup-winning captain.</li>
-        </ul>
-    </section>
+  <!-- About Indian Cricket Section -->
+  <section id="about" class="section">
+    <h1>About Indian Cricket</h1>
+    <p>Indian cricket has a rich and storied history, with major milestones such as...</p>
+    <ul>
+      <li>Milestone 1: India’s first Test match victory.</li>
+      <li>Milestone 2: Winning the ICC World Cup in 1983.</li>
+      <li>Milestone 3: Historic Test series win in Australia 2020-21.</li>
+    </ul>
+    <h2>Famous Players</h2>
+    <ul>
+      <li>Sachin Tendulkar: "The Little Master" - Icon of Indian cricket.</li>
+      <li>Virat Kohli: Modern-day cricket legend.</li>
+      <li>Kapil Dev: 1983 World Cup-winning captain.</li>
+    </ul>
+  </section>
 
-    <!-- Indian Cricket Team Section -->
-    <section id="team" class="section">
-        <h1>Indian Cricket Team</h1>
-        <p>Meet the current Indian cricket squad!</p>
-        <div id="team-members">
-            <!-- Profile cards will be populated dynamically here -->
-        </div>
-    </section>
+  <!-- Indian Cricket Team Section -->
+  <section id="team" class="section">
+    <h1>Indian Cricket Team</h1>
+    <p>Meet the current Indian cricket squad!</p>
+    <div id="team-members">
+      <!-- Profile cards will be populated dynamically here -->
+    </div>
+  </section>
 
-    <!-- Media Gallery Section -->
-    <section id="gallery" class="section">
-        <h1>Media Gallery</h1>
-        <input type="text" id="search" placeholder="Search images..." onkeyup="filterGallery()">
-        <div id="image-gallery">
-            <!-- Gallery images will be populated here -->
-        </div>
-    </section>
+  <!-- Media Gallery Section -->
+  <section id="gallery" class="section">
+    <h1>Media Gallery</h1>
+    <input type="text" id="search" placeholder="Search images..." onkeyup="filterGallery()">
+    <div id="image-gallery">
+      <!-- Gallery images will be populated here -->
+    </div>
+  </section>
 
-    <!-- Statistics and Records Section -->
-    <section id="records" class="section">
-        <h1>Statistics and Records</h1>
-        <div id="team-records">
-            <!-- Team records and statistics will be dynamically displayed here -->
-        </div>
-        <div id="player-records">
-            <!-- Player records and interactive charts will be displayed here -->
-        </div>
-    </section>
+  <!-- Statistics and Records Section -->
+  <section id="records" class="section">
+    <h1>Statistics and Records</h1>
+    <div id="team-records">
+      <!-- Team records and statistics will be dynamically displayed here -->
+    </div>
+    <div id="player-records">
+      <!-- Player records and interactive charts will be displayed here -->
+    </div>
+  </section>
 
-    <!-- Resources Section -->
-    <section id="resources" class="section">
-        <h1>Resources</h1>
-        <ul>
-            <li><a href="https://www.bcci.tv" target="_blank">Official BCCI Website</a></li>
-            <li><a href="https://www.icc-cricket.com" target="_blank">Official ICC Website</a></li>
-        </ul>
-    </section>
+  <!-- Resources Section -->
+  <section id="resources" class="section">
+    <h1>Resources</h1>
+    <ul>
+      <li><a href="https://www.bcci.tv" target="_blank">Official BCCI Website</a></li>
+      <li><a href="https://www.icc-cricket.com" target="_blank">Official ICC Website</a></li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; 2024 Indian Cricket. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Indian Cricket. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
 </body>
+
 </html>

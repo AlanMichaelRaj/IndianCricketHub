@@ -59,3 +59,56 @@ function filterGallery() {
         img.style.display = altText.includes(query) ? "block" : "none";
     });
 }
+
+
+async function fetchTeamRecords() {
+    try {
+        const response = await fetch("https://00ef4e9b-77f0-4770-a05e-852e0c3cce03-00-326iz8r73a3gm.riker.replit.dev/getIndianTeamList", {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json', // Important to specify JSON content type
+            },
+        });
+        const data = await response.json();
+
+        // Check if data.list is an array and handle it accordingly
+        if (data && Array.isArray(data.list) && data !== undefined) {
+            renderTeamRecords(data.list);
+        } else {
+            console.error("Unexpected data format:", data);
+        }
+    } catch (error) {
+        console.error("Error fetching team data:", error);
+    }
+}
+
+function renderTeamRecords(teams) {
+    const teamRecordsDiv = document.getElementById("team-records");
+    if (!teamRecordsDiv) {
+        console.error("Element with id 'team-records' not found.");
+        return;
+    }
+    teamRecordsDiv.innerHTML = ""; // Clear previous content
+
+    // Loop through each team and create HTML elements for teamId and teamName only
+    teams.forEach(team => {
+        if (team.teamId && team.teamName) {
+            const teamDiv = document.createElement("div");
+            teamDiv.className = "team";
+            teamDiv.innerHTML = `
+                <p>Team ID: ${team.teamId}</p>
+                <p>Team Name: ${team.teamName}</p>
+            `;
+            // Add a click event to navigate to profile page with teamId in URL
+            teamDiv.onclick = () => {
+                // Redirect to profile page with teamId as a query parameter
+                window.location.href = `profile.html?teamId=${team.teamId}`;
+            };
+
+            teamRecordsDiv.appendChild(teamDiv);
+        }
+    });
+}
+
+// Call the function to fetch and display team records
+fetchTeamRecords();

@@ -1,0 +1,90 @@
+/* Apply a base style to the profile container */
+.player-profile {
+    background: linear-gradient(145deg, #6e7aeb, #3c47a0); /* Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Add animation for the fade-in and scaling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Add some hover effects */
+.player-profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Style the player information text */
+.player-profile p {
+    font-size: 16px;
+    margin: 8px 0;
+    transition: color 0.3s ease;
+}
+
+/* Make the player name stand out */
+.player-profile p strong {
+    font-weight: bold;
+    color: #ffb84d; /* A golden color for emphasis */
+}
+
+/* Add a divider line between players */
+.player-profile hr {
+    border: 0;
+    border-top: 2px solid #ffb84d;
+    margin-top: 20px;
+    opacity: 0.3;
+}
+
+/* Style for the profile container when it's loaded */
+.player-profile.loaded {
+    opacity: 1;
+}
+
+/* Add a subtle glow effect to the background */
+.player-profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+/* Glowing effect */
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Add a little space between the profiles when displayed in a grid */
+#profile-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
